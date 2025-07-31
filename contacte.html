@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Consultores Corporativos | Contacte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/VSCC-globo-Transparente.png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/VSCC-globo-Transparente.png" alt="VS Consultores Corporativos">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-translate="home">Inici</a></li>
+                    <li><a href="serveis.html" class="nav-link" data-translate="services">Serveis</a></li>
+                    <li><a href="sobre-nosaltres.html" class="nav-link" data-translate="about">Sobre Nosaltres</a></li>
+                    <li><a href="blog.html" class="nav-link" data-translate="blog">Blog</a></li>
+                    <li><a href="contacte.html" class="nav-link active" data-translate="contact">Contacte</a></li>
+                </ul>
+            </nav>
+
+            <div class="language-selector">
+                <button class="language-button" aria-label="Canviar idioma">
+                    <span class="current-language">CA</span>
+                    <i class="fas fa-chevron-down language-arrow"></i>
+                </button>
+                <ul class="language-dropdown">
+                    <li><a href="#" class="language-option" data-lang="ca">Català</a></li>
+                    <li><a href="#" class="language-option" data-lang="es">Español</a></li>
+                    <li><a href="#" class="language-option" data-lang="en">English</a></li>
+                </ul>
+            </div>
+
+            <button class="mobile-menu-button" aria-label="Menú mòbil">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-content animate__animated animate__fadeInUp">
+            <h1 data-translate="contact_title">Contacte</h1>
+            <p data-translate="contact_subtitle">Estem a la vostra disposició per a qualsevol consulta</p>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <h2 data-translate="contact_info">Informació de Contacte</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Oriente 6 No. 1738, Colonia Centro, Orizaba, Veracruz, Mèxic. Codi Postal: 94300</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+52 (272) 688 2595</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@vscc.com.mx</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p data-translate="office_hours">Dilluns a Divendres: 9:00 - 18:00</p>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2 data-translate="contact_form">Formulari de Contacte</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-translate="full_name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-translate="email">Correu electrònic</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-translate="phone">Telèfon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service" data-translate="service_interest">Servei d'interès</label>
+                            <select id="service" name="service">
+                                <option value="" data-translate="select_service">Selecciona un servei</option>
+                                <option value="fiscal" data-translate="tax_consulting">Consultoria Fiscal</option>
+                                <option value="nomines" data-translate="payroll_management">Administració de Nòmines</option>
+                                <option value="auditoria" data-translate="financial_audit">Auditoria Financera</option>
+                                <option value="altres" data-translate="other_services">Altres consultories</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="message">Missatge</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-translate="send_message">Enviar missatge</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.647986051589!2d-97.0997886845931!3d18.85047798760261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c4f6c3ef9b3b0b%3A0x8e6f7e6f5f6f5f6f!2sOriente%206%20No.%201738%2C%20Col.%20Centro%2C%20Orizaba%2C%20Ver.!5e0!3m2!1ses!2smx!4v1620000000000!5m2!1ses!2smx" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                title="Ubicació de VS Consultores Corporativos">
+        </iframe>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <img src="images/VSCC-globo-Transparente.png" alt="VS Consultores Corporativos" class="footer-logo">
+                <p data-translate="footer_desc">Consultoria estratègica especialitzada des de 2005</p>
+            </div>
+            <div class="footer-column">
+                <h3 data-translate="quick_links">Enllaços Ràpids</h3>
+                <a href="index.html" data-translate="home">Inici</a>
+                <a href="serveis.html" data-translate="services">Serveis</a>
+                <a href="sobre-nosaltres.html" data-translate="about">Sobre Nosaltres</a>
+                <a href="blog.html" data-translate="blog">Blog</a>
+                <a href="contacte.html" data-translate="contact">Contacte</a>
+            </div>
+            <div class="footer-column">
+                <h3 data-translate="contact_us">Contacte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Oriente 6 No. 1738, Col. Centro, Orizaba, Ver.</p>
+                <p><i class="fas fa-phone"></i> (272) 688 2595</p>
+                <p><i class="fas fa-envelope"></i> info@vscc.com.mx</p>
+            </div>
+            <div class="footer-column">
+                <h3 data-translate="language">Idioma</h3>
+                <div class="language-switcher footer-language">
+                    <button class="language-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>CA</span>
+                    </button>
+                    <ul class="language-dropdown">
+                        <li><a href="#" data-lang="ca">Català</a></li>
+                        <li><a href="#" data-lang="es">Español</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span data-translate="copyright">2023 VS Consultores Corporativos. Tots els drets reservats.</span></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
