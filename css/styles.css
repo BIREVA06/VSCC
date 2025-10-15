@@ -256,6 +256,7 @@ img {
 /* =================================== */
 .services-2x3 {
     background-color: var(--light);
+    padding: 4rem 1rem;
 }
 
 .services-grid-container {
@@ -375,7 +376,6 @@ img {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
     padding-right: 2rem;
-    border-right: 3px solid var(--accent);
     height: 100%;
 }
 
@@ -390,6 +390,25 @@ img {
     font-size: 1.2rem;
     font-weight: 600;
     text-align: left;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.about-subtitle::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 2px; /*Gruix de la línia*/
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent); /* Color vermell de la línia*/
+    transition: width 0.3s ease-in-out; /* Animació suau */
+}
+
+.about-subtitle:hover::after {
+    width: 100%; /* La línia apareix al fer hover */
 }
 
 .about-text {
@@ -406,8 +425,8 @@ img {
 
 .team-member {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 0; /* Canviat de 3rem a 0 per unir imatge i text */
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
     align-items: center;
     margin-top: 2rem;
     background-color: var(--white);
@@ -419,7 +438,7 @@ img {
 
 .team-member img {
     width: 100%;
-    height: 100%; /* Imatge ocupa tota l'alçada del grid item */
+    height: 100%;
     object-fit: cover;
     border-radius: 0;
     box-shadow: none;
@@ -1217,7 +1236,7 @@ footer {
 /* ===== NOU ESTIL PER A LA SECCIÓ DE SERVEIS PRE-FOOTER ===== */
 .pre-footer-services {
     background-color: var(--white);
-    padding: 4rem 1rem 2rem 1rem;
+    padding: 4rem 1rem;
     border-top: 1px solid var(--gray);
 }
 
@@ -1272,6 +1291,11 @@ footer {
 /* =================================== */
 /* =  ESTILOS VENTAJA COMPETITIVA  = */
 /* =================================== */
+
+#ventaja {
+    background-color: var(--white);
+}
+
 .ventaja-layout {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -1306,6 +1330,12 @@ footer {
     color: var(--primary);
     font-size: 1.5rem;
     margin-top: 5px;
+    transition: transform 0.3s ease;
+}
+
+.ventaja-item:hover i {
+    color: var(--accent);
+    transform: scale(1.5);
 }
 
 .ventaja-content h3 {
@@ -1324,7 +1354,7 @@ footer {
 
 /* ================================================================== */
 /* ================================================================== */
-/* =                   INICI DEL DISSENY RESPONSIVE                   = */
+/* =             INICI DEL DISSENY RESPONSIVE                     = */
 /* ================================================================== */
 /* ================================================================== */
 
