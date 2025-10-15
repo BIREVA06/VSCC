@@ -1,46 +1,34 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Consultores Corporativos | Contacte</title>
+    <title>VS Consultores Corporativos | Contacto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/VSCC-globo-Transparente.png">
+    <link rel="icon" href="images/images/VSCC-globo-blanco-transparent.png">
 </head>
 <body>
     <header class="main-header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/VSCC-globo-Transparente.png" alt="VS Consultores Corporativos">
+                    <img src="images/VSCC-globo-blanco-transparent.png" alt="VS Consultores Corporativos">
                 </a>
             </div>
 
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link" data-translate="home">Inici</a></li>
-                    <li><a href="serveis.html" class="nav-link" data-translate="services">Serveis</a></li>
-                    <li><a href="sobre-nosaltres.html" class="nav-link" data-translate="about">Sobre Nosaltres</a></li>
-                    <li><a href="blog.html" class="nav-link" data-translate="blog">Blog</a></li>
-                    <li><a href="contacte.html" class="nav-link active" data-translate="contact">Contacte</a></li>
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li><a href="sobre-nosaltres.html" class="nav-link">Acerca de</a></li>
+                    <li><a href="serveis.html" class="nav-link">Nuestros Servicios</a></li>
+                    <li><a href="blog.html" class="nav-link">Boletín</a></li>
+                    <li><a href="contacte.html" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
 
-            <div class="language-selector">
-                <button class="language-button" aria-label="Canviar idioma">
-                    <span class="current-language">CA</span>
-                    <i class="fas fa-chevron-down language-arrow"></i>
-                </button>
-                <ul class="language-dropdown">
-                    <li><a href="#" class="language-option" data-lang="ca">Català</a></li>
-                    <li><a href="#" class="language-option" data-lang="es">Español</a></li>
-                    <li><a href="#" class="language-option" data-lang="en">English</a></li>
-                </ul>
-            </div>
-
-            <button class="mobile-menu-button" aria-label="Menú mòbil">
+            <button class="mobile-menu-button" aria-label="Menú móvil">
                 <span class="menu-bar"></span>
                 <span class="menu-bar"></span>
                 <span class="menu-bar"></span>
@@ -48,10 +36,10 @@
         </div>
     </header>
 
-    <section class="page-hero">
-        <div class="hero-content animate__animated animate__fadeInUp">
-            <h1 data-translate="contact_title">Contacte</h1>
-            <p data-translate="contact_subtitle">Estem a la vostra disposició per a qualsevol consulta</p>
+    <section class="contact-header-intro">
+        <div class="section-container">
+            <h1>Agenda tu cita</h1>
+            <p>Queremos contribuir al logro de tus metas. Ayúdanos a conocerte completando el siguiente formulario. Daremos respuesta a la brevedad posible.</p>
         </div>
     </section>
 
@@ -59,10 +47,10 @@
         <div class="section-container">
             <div class="contact-grid">
                 <div class="contact-details">
-                    <h2 data-translate="contact_info">Informació de Contacte</h2>
+                    <h2>Información de Contacto</h2>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>VSCC - Valdés Sánchez Consultores Corporativos, Ote. 6 1320-6, Centro, 94300 Orizaba, Ver.</p>
+                        <p>Ote. 6 1320-6, Centro, 94300 Orizaba, Ver.</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -70,49 +58,46 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>info@vscc.com.mx</p>
+                        <p>administracion@vscc.com.mx</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
-                        <p data-translate="office_hours">Dilluns a Divendres: 9:00 - 18:00</p>
-                    </div>
-                    <div class="contact-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h2 data-translate="contact_form">Formulari de Contacte</h2>
+                    <h2>Formulario de Contacto</h2>
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name" data-translate="full_name">Nom complet</label>
+                            <label for="name">Nombre completo</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email" data-translate="email">Correu electrònic</label>
+                            <label for="email">Correo electrónico</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone" data-translate="phone">Telèfon</label>
+                            <label for="phone">Teléfono</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="service" data-translate="service_interest">Servei d'interès</label>
+                            <label for="service">Servicio de interés</label>
                             <select id="service" name="service">
-                                <option value="" data-translate="select_service">Selecciona un servei</option>
-                                <option value="fiscal" data-translate="tax_consulting">Consultoria Fiscal</option>
-                                <option value="nomines" data-translate="payroll_management">Administració de Nòmines</option>
-                                <option value="auditoria" data-translate="financial_audit">Auditoria Financera</option>
-                                <option value="altres" data-translate="other_services">Altres consultories</option>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="auditoria">Auditoría Financiera, Fiscal y Especializada</option>
+                                <option value="dictamen_fiscal">Dictamen Fiscal</option>
+                                <option value="dictamenes_imss">Dictámenes (IMSS, INFONAVIT, etc.)</option>
+                                <option value="auditorias_especiales">Auditorías Especiales</option>
+                                <option value="outsourcing">Outsourcing Contable y Fiscal</option>
+                                <option value="nominas">Administración de Nóminas</option>
+                                <option value="otro">Otra consulta</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message" data-translate="message">Missatge</label>
+                            <label for="message">Mensaje</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn" data-translate="send_message">Enviar missatge</button>
+                        <button type="submit" class="btn">Enviar mensaje</button>
                     </form>
                 </div>
             </div>
@@ -120,51 +105,54 @@
     </section>
 
     <section class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4478.922848424951!2d-97.09514462419766!3d18.848682559068276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c4fd5c3aea7f6b%3A0x3ffd7df066b1e17e!2sVSCC%20-%20Vald%C3%A9s%20S%C3%A1nchez%20Consultores%20Corporativos!5e1!3m2!1sen!2smx!4v1755270813130!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.933333333333!2d-97.100000!3d18.850000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDUxJzAwLjAiTiA5N8KwMDYnMDAuMCJX!5e0!3m2!1ses!2ses!4v1614582000000!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
+    <section class="pre-footer-services">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Conoce Nuestros Servicios</h2>
+            </div>
+            <ul class="service-links-list">
+                <li><a href="serveis.html#auditoria-financiera"><i class="fas fa-balance-scale"></i> Auditoría Financiera, Fiscal y Especializada</a></li>
+                <li><a href="serveis.html#dictamen-fiscal"><i class="fas fa-file-contract"></i> Dictamen Fiscal</a></li>
+                <li><a href="serveis.html#dictamenes-imss"><i class="fas fa-landmark"></i> Dictámenes (IMSS, INFONAVIT, etc.)</a></li>
+                <li><a href="serveis.html#auditorias-especiales"><i class="fas fa-search"></i> Auditorías Especiales</a></li>
+                <li><a href="serveis.html#outsourcing"><i class="fas fa-cogs"></i> Outsourcing Contable y Fiscal</a></li>
+                <li><a href="serveis.html#nomines"><i class="fas fa-users-cog"></i> Administración de Nóminas</a></li>
+            </ul>
+        </div>
+    </section>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <img src="images/VSCC-globo-Transparente.png" alt="VS Consultores Corporativos" class="footer-logo">
-                <p data-translate="footer_desc">Consultoria estratègica especialitzada des de 2005</p>
+                <p class="footer-company-name">VSCC - Valdés Sánchez <br> Consultores Corporativos, SC</p>
+                <a href="index.html">Inicio</a>
+                <a href="serveis.html">Servicios</a>
+                <a href="sobre-nosaltres.html">Sobre Nosotros</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacte.html">Contacto</a>
             </div>
+
             <div class="footer-column">
-                <h3 data-translate="quick_links">Enllaços Ràpids</h3>
-                <a href="index.html" data-translate="home">Inici</a>
-                <a href="serveis.html" data-translate="services">Serveis</a>
-                <a href="sobre-nosaltres.html" data-translate="about">Sobre Nosaltres</a>
-                <a href="blog.html" data-translate="blog">Blog</a>
-                <a href="contacte.html" data-translate="contact">Contacte</a>
-            </div>
-            <div class="footer-column">
-                <h3 data-translate="contact_us">Contacte</h3>
-                <p><i class="fas fa-map-marker-alt"></i> VSCC - Valdés Sánchez Consultores Corporativos, Ote. 6 1320-6, Centro, 94300 Orizaba, Ver.</p>
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Ote. 6 1320-6, Centro, 94300 Orizaba, Ver.</p>
                 <p><i class="fas fa-phone"></i> (272) 688 2595</p>
-                <p><i class="fas fa-envelope"></i> info@vscc.com.mx</p>
-            </div>
-            <div class="footer-column">
-                <h3 data-translate="language">Idioma</h3>
-                <div class="language-switcher footer-language">
-                    <button class="language-btn">
-                        <i class="fas fa-globe"></i>
-                        <span>CA</span>
-                    </button>
-                    <ul class="language-dropdown">
-                        <li><a href="#" data-lang="ca">Català</a></li>
-                        <li><a href="#" data-lang="es">Español</a></li>
-                    </ul>
-                </div>
+                <p><i class="fas fa-envelope"></i> administracion@vscc.com.mx</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Suscríbete</h3>
+                <iframe src="https://vscc.substack.com/embed?theme=dark" frameborder="0" scrolling="no"></iframe>
+                
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span data-translate="copyright">2023 VS Consultores Corporativos. Tots els drets reservats.</span></p>
+            <p>© 2025 VSCC - Valdés Sánchez Consultores Corporativos, SC. Todos los derechos reservados.</p>
         </div>
     </footer>
 
