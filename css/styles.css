@@ -1,18 +1,17 @@
 :root {
-
     /* Colors d'Èmfasi */
-    --primary: #002060;         /* Blau marí: Color principal per a títols, fons, etc. */
-    --secondary: #002060;       /* Blau marí: Color secundari, mantenim consistència amb el primari. */
-    --accent: #C0282D;          /* Vermell: Per a botons principals, icones i detalls a destacar. */
+    --primary: #002060;        /* Blau marí: Color principal per a títols, fons, etc. */
+    --secondary: #002060;      /* Blau marí: Color secundari, mantenim consistència amb el primari. */
+    --accent: #C0282D;         /* Vermell: Per a botons principals, icones i detalls a destacar. */
 
     /* Colors Base */
-    --dark: #414141;            /* Gris fosc: Per al text principal, millora la llegibilitat. */
-    --white: #FFFFFF;           /* Blanc: Per a text sobre fons foscos i fons de seccions. */
+    --dark: #414141;           /* Gris fosc: Per al text principal, millora la llegibilitat. */
+    --white: #FFFFFF;          /* Blanc: Per a text sobre fons foscos i fons de seccions. */
 
     /* Colors Complementaris i de Suport */
-    --electric-blue: #356CFF;   /* Blau elèctric: Nou! Ideal per a enllaços o botons secundaris. */
-    --gray: #C4CFE6;            /* Blau clar: Per a fons de seccions, targetes o detalls subtils. */
-    --light: #f9f9f9;           /* Color de fons general molt clar, gairebé blanc. */
+    --electric-blue: #356CFF;  /* Blau elèctric: Nou! Ideal per a enllaços o botons secundaris. */
+    --gray: #C4CFE6;           /* Blau clar: Per a fons de seccions, targetes o detalls subtils. */
+    --light: #f9f9f9;          /* Color de fons general molt clar, gairebé blanc. */
 }
 
 
@@ -326,6 +325,7 @@ img {
 
 
 /* Serveis detall */
+/* AQUESTA SECCIÓ ES SOBREESCRIU MÉS AVALL AMB LES NOVES MILLORES */
 .services-detail {
     padding: 4rem 0;
 }
@@ -1171,7 +1171,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     position: relative;
-    max-width: 600px;
+    max-width: 800px; /* Ampliat per al nou contingut */
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
@@ -1354,7 +1354,7 @@ footer {
 
 /* ================================================================== */
 /* ================================================================== */
-/* =             INICI DEL DISSENY RESPONSIVE                     = */
+/* =           INICI DEL DISSENY RESPONSIVE                         = */
 /* ================================================================== */
 /* ================================================================== */
 
@@ -1548,4 +1548,218 @@ footer {
         right: 15px;
         bottom: 15px;
     }
+}
+
+/* ================================================================== */
+/* =           ESTILS ESPECÍFICS PER A LA PÀGINA DE CONTACTE (CORREGITS) = */
+/* ================================================================== */
+
+/* 1. Canviem el fons del BODY a blau */
+body.contact-page {
+    background-color: var(--primary);
+}
+
+/* 2. Canviem el text de la introducció a blanc */
+.contact-page .contact-header-intro h1,
+.contact-page .contact-header-intro p {
+    color: var(--white);
+}
+
+/* 3. (LA CORRECCIÓ CLAU) Traiem el fons blanc de les seccions per deixar veure el blau del body */
+.contact-page .contact-info,
+.contact-page .pre-footer-services {
+    background-color: transparent;
+    border-top: none; /* Traiem la vora superior que tenia pre-footer */
+}
+
+/* 4. Ajustem els colors del text dins de la secció pre-footer a blanc per llegibilitat */
+.contact-page .pre-footer-services .section-title h2 {
+    color: var(--white);
+}
+
+.contact-page .pre-footer-services .service-links-list a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.contact-page .pre-footer-services .service-links-list a:hover {
+    color: var(--gray); /* Un color més clar per al hover */
+}
+
+/* ================================================================== */
+/* =        MILLORES DE DISSENY PER A LA PÀGINA DE SERVEIS          = */
+/* ================================================================== */
+
+/* 1. Fons general de la secció de serveis */
+.services-detail {
+    background-color: var(--light); /* Fons general gris clar per contrastar amb les targetes */
+    padding: 4rem 1rem;
+}
+
+/* 2. Estil de "Targeta" per a cada servei */
+.service-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mantenim la divisió 50/50 */
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    background-color: var(--white); /* Fons blanc per a la targeta */
+    padding: 2.5rem;
+    border-radius: 12px; /* Cantonades arrodonides */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); /* Ombra subtil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-8px); /* Efecte d'elevació al passar el ratolí */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Lògica per alternar la disposició (Imatge a la dreta en els elements parells) */
+.service-item:nth-child(even) {
+    direction: rtl; /* Això canvia l'ordre visual dels elements fills */
+}
+
+.service-item:nth-child(even) > * {
+    direction: ltr; /* Restaurem la direcció del text per al contingut */
+}
+
+/* 4. Millora de les llistes de punts amb icones */
+.service-text ul {
+    list-style: none; /* Traiem les vinyetes per defecte */
+    padding-left: 0;
+    margin: 1.5rem 0;
+}
+
+.service-text li {
+    padding-left: 2rem; /* Espai per a la icona */
+    position: relative;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.service-text li::before {
+    content: '\f058'; /* Codi de la icona 'check-circle' de Font Awesome */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900; /* Assegura que la icona sigui sòlida */
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--accent); /* Color vermell d'accent */
+    font-size: 1.2rem;
+}
+
+/* 5. Ajust per al botó dins de cada targeta */
+.btn-spacing {
+    margin-top: 1.5rem;
+}
+
+/* 6. Ajustaments per a la secció CTA (Crida a l'acció) */
+.cta-banner {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 12px;
+    margin-top: 4rem; /* Més espai superior */
+}
+
+.cta-banner h2 {
+    color: var(--white);
+}
+
+.cta-banner p {
+    color: var(--white);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Adaptació responsive per a les targetes de servei */
+@media (max-width: 992px) {
+    .service-item,
+    .service-item:nth-child(even) {
+        grid-template-columns: 1fr; /* Apilem imatge i text en una sola columna */
+        direction: ltr; /* Resetejem la direcció */
+        padding: 2rem;
+        gap: 2rem;
+    }
+}
+
+/* ================================================================== */
+/* =      ESTILS PER A LA CAPÇALERA DE LES PÀGINES INTERNES         = */
+/* ================================================================== */
+
+/* Aquests estils només s'apliquen a la classe .page-hero-content */
+
+.page-hero-content h1 {
+    color: var(--white);
+    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombra per a més llegibilitat */
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.page-hero-content p {
+    color: var(--white);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    text-align: center;
+    opacity: 0.9;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    max-width: 600px;
+    margin-left: auto; /* Truc per centrar el bloc de text */
+    margin-right: auto;
+}
+
+/* ================================================================== */
+/* =           ESTILS PER AL NOU PERFIL EMERGENT (MODAL)            = */
+/* ================================================================== */
+
+.profile-bio {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.profile-columns {
+    display: flex;
+    flex-wrap: wrap; /* Permet que les columnes es posin una sota l'altra en pantalles petites */
+    gap: 2rem;       /* Espai entre les columnes */
+}
+
+.profile-column {
+    flex: 1;         /* Fa que cada columna ocupi el mateix espai */
+    min-width: 250px;/* Amplada mínima abans de que es trenqui la línia */
+}
+
+.profile-bio h3 {
+    color: var(--accent); /* Color vermell per als títols de secció */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--gray);
+    padding-bottom: 0.5rem;
+}
+
+.profile-bio p {
+    margin-bottom: 1rem;
+}
+
+.profile-bio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-bio li {
+    padding-left: 1.4rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.profile-bio li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent); /* Color vermell per a les vinyetes */
+    font-size: 1.5rem;
+    line-height: 1;
 }
