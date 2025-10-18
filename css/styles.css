@@ -513,6 +513,19 @@ img {
     margin-bottom: 1.2rem;
 }
 
+/* --- INICI CODI AFEGIT --- */
+.member-info .quote {
+    font-style: italic;
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+/* --- FI CODI AFEGIT --- */
+
 /* Blog */
 .blog-posts {
     background-color: var(--white);
@@ -1333,7 +1346,7 @@ footer {
 }
 
 /* =================================== */
-/* =  ESTILOS VENTAJA COMPETITIVA    = */
+/* =  ESTILOS VENTAJA COMPETITIVA     = */
 /* =================================== */
 
 #ventaja {
@@ -1596,7 +1609,7 @@ footer {
 }
 
 /* ================================================================== */
-/* =     ESTILS ESPECÍFICS PER A LA PÀGINA DE CONTACTE             = */
+/* =    ESTILS ESPECÍFICS PER A LA PÀGINA DE CONTACTE                = */
 /* ================================================================== */
 
 body.contact-page {

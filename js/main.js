@@ -130,4 +130,24 @@ document.addEventListener('DOMContentLoaded', function() {
         animatedElements.forEach(el => el.style.opacity = '1');
     }
 
+    /* --- INICI CODI AFEGIT --- */
+    // --- 7. LÒGICA PER A L'ENLLAÇ EXTERN DEL BLOG ---
+    const handleExternalLink = function(event) {
+        event.preventDefault();
+        const url = event.currentTarget.href;
+        window.open(url, '_blank');
+    };
+
+    const blogLinkHeader = document.getElementById('blog-link-header');
+    const blogLinkFooter = document.getElementById('blog-link-footer');
+
+    if (blogLinkHeader) {
+        blogLinkHeader.addEventListener('click', handleExternalLink);
+    }
+
+    if (blogLinkFooter) {
+        blogLinkFooter.addEventListener('click', handleExternalLink);
+    }
+    /* --- FI CODI AFEGIT --- */
+
 });
