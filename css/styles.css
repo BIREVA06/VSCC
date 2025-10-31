@@ -1337,6 +1337,26 @@ footer {
     text-align: center;
 }
 
+/* --- INICI CODI AFEGIT PER A LLISTA SENSE ENLLAÇOS --- */
+/* Estil per als <li> quan no hi ha enllaç (classe 'service-links-list-no-links') */
+.service-links-list-no-links li {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: default; /* Indiquem que no és clicable */
+}
+
+/* Estil per a les icones dins dels <li> sense enllaç */
+.service-links-list-no-links li i {
+    margin-right: 0.75rem;
+    color: var(--accent);
+    width: 20px;
+    text-align: center;
+}
+/* --- FI CODI AFEGIT --- */
+
 /* Iframe de Substack al footer */
 .footer-column iframe {
     width: 100%;
@@ -1526,6 +1546,15 @@ footer {
     .team-member img {
         height: 300px;
     }
+
+    /* --- INICI CORRECCIÓ 'ACERCA DE' MÒBIL --- */
+    .about-layout > .about-item {
+        /* Canviem el grid intern de 2 columnes a 1 sola columna */
+        grid-template-columns: 1fr;
+        /* Reduïm l'espaiat per a mòbils */
+        gap: 0.5rem; 
+    }
+    /* --- FI CORRECCIÓ 'ACERCA DE' MÒBIL --- */
     
     .service-links-list {
         grid-template-columns: 1fr;
@@ -1639,6 +1668,13 @@ body.contact-page {
 .contact-page .pre-footer-services .service-links-list a:hover {
     color: var(--gray);
 }
+
+/* --- INICI CODI AFEGIT PER A LLISTA SENSE ENLLAÇOS A 'CONTACTE' --- */
+/* Sobreescriptura per a la pàgina de contacte (fons blau) */
+.contact-page .service-links-list-no-links li {
+    color: var(--white);
+}
+/* --- FI CODI AFEGIT --- */
 
 /* ================================================================== */
 /* =       ESTILS PER A LA CAPÇALERA DE LES PÀGINES INTERNES          = */
