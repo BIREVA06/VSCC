@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // --- 1. LÒGICA PER AL MENÚ MÒBIL ---
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const mainNav = document.querySelector('.main-nav'); // CORREGIT: L'element a mostrar és '.main-nav'
+    const mainNav = document.querySelector('.main-nav'); 
 
     if (mobileMenuButton && mainNav) {
         mobileMenuButton.addEventListener('click', () => {
@@ -13,17 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 2. MARCAR L'ENLLAÇ DE NAVEGACIÓ ACTIU ---
-    // Aquesta funció troba la pàgina actual i li posa la classe 'active' al menú
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-list .nav-link');
 
     navLinks.forEach(link => {
-        // Obtenim el nom de l'arxiu de l'atribut href
         const linkPage = link.getAttribute('href').split('/').pop();
         if (currentPage === linkPage) {
             link.classList.add('active');
         } else {
-            link.classList.remove('active'); // Assegurem que els altres no la tinguin
+            link.classList.remove('active');
         }
     });
 
@@ -93,44 +91,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // --- 5. LÒGICA PER AL FORMULARI DE LA PÀGINA DE CONTACTE ---
-    const mainContactForm = document.getElementById('contactForm'); // Aquest és el formulari gran, no el flotant
+    const mainContactForm = document.getElementById('contactForm');
     if (mainContactForm) {
         mainContactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Aquí aniria la lògica d'enviament que ja tenies
             alert('Formulari de la pàgina de contacte enviat!');
             mainContactForm.reset();
         });
     }
 
 
-    // --- 6. ANIMACIONS EN FER SCROLL (VERSIÓ MILLORADA) ---
-    // Aquest sistema és molt més eficient que l'anterior
+    // --- 6. ANIMACIONS EN FER SCROLL ---
     const animatedElements = document.querySelectorAll('.animate__animated');
 
     if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Afegeix les classes d'animació de animate.css
                     entry.target.classList.add('animate__fadeInUp');
-                    // Deixa d'observar l'element un cop s'ha animat
                     observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.1 // L'animació s'activa quan un 10% de l'element és visible
+            threshold: 0.1
         });
 
         animatedElements.forEach(el => {
             observer.observe(el);
         });
     } else {
-        // Si el navegador és molt antic i no suporta IntersectionObserver, simplement mostra els elements
         animatedElements.forEach(el => el.style.opacity = '1');
     }
 
-    /* --- INICI CODI AFEGIT --- */
     // --- 7. LÒGICA PER A L'ENLLAÇ EXTERN DEL BLOG ---
     const handleExternalLink = function(event) {
         event.preventDefault();
@@ -148,6 +140,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (blogLinkFooter) {
         blogLinkFooter.addEventListener('click', handleExternalLink);
     }
-    /* --- FI CODI AFEGIT --- */
+    
+    // --- 8. EFECTE NEU (NOU!) ---
+    // Comprovem que la llibreria existeix abans d'activar-la per evitar errors
+    if (window.Snowflakes) {
+        new Snowflakes({
+            color: '#ffffff', // Color blanc
+            count: 25,        // Nombre de flocs
+            minOpacity: 0.2,
+            maxOpacity: 0.7
+        });
+    }
 
 });
